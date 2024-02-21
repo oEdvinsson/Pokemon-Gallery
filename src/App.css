@@ -1,38 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #56CCF2; 
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2); 
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.headerContainer {
+  position: relative;
+  background-image: url('./Images/pokeapi.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 70%;
+  margin-top: 20px;
+  padding-bottom: 17%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contentContainer {
+  position: relative;
+  width: 70%;
+  flex: 1; /* Fill up remaining space */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange child elements vertically */
+  align-items: center;
+}
+
+.input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-top: 40px;
+}
+
+.pokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  gap: 5px;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: black solid 1px;
+  perspective: 1000px;
+  margin-bottom: 120px;
+  border-radius: 5px;
+  background-color: whitesmoke
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide backside during animation */
+  transition: transform 0.5s; /* Add transition for smooth rotation */
+}
+
+.card-front {
+  transform: rotateY(0deg); /* Initial position */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Initially flipped */
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg); /* Rotate to reveal backside */
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg); /* Rotate back to original position */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio for images */
+}
+
+.list {
+  list-style: none;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+.pokemon-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.copyright {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
+}
+
+.pikachu {
+  margin-top: 50px;
+  height: 200px;
+  width: 200px;
+}
+
+.loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+}
+
+/* Media query for 3 columns layout */
+@media screen and (max-width: 1200px) {
+  .pokemonGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Media query for 2 columns layout */
+@media screen and (max-width: 900px) {
+  .pokemonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query for 1 column layout */
+@media screen and (max-width: 600px) {
+  .pokemonGrid {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 }
