@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokemon-gallery/static/css/main.bab71535.css",
-    "main.js": "/pokemon-gallery/static/js/main.723c19e5.js",
-    "static/media/pikachuGIF.gif": "/pokemon-gallery/static/media/pikachuGIF.ed4a581e79b69580c86a.gif",
-    "static/media/pokeapi.svg": "/pokemon-gallery/static/media/pokeapi.5376209d72174c83f231.svg",
-    "static/media/loading-gif.gif": "/pokemon-gallery/static/media/loading-gif.803f24369a085e35482e.gif",
-    "index.html": "/pokemon-gallery/index.html",
-    "main.bab71535.css.map": "/pokemon-gallery/static/css/main.bab71535.css.map",
-    "main.723c19e5.js.map": "/pokemon-gallery/static/js/main.723c19e5.js.map"
+    "main.css": "/Pokemon-Gallery/static/css/main.48c556fa.css",
+    "main.js": "/Pokemon-Gallery/static/js/main.41441cac.js",
+    "static/media/pikachuGIF.gif": "/Pokemon-Gallery/static/media/pikachuGIF.ed4a581e79b69580c86a.gif",
+    "static/media/pokeapi.svg": "/Pokemon-Gallery/static/media/pokeapi.5376209d72174c83f231.svg",
+    "static/media/loading-gif.gif": "/Pokemon-Gallery/static/media/loading-gif.803f24369a085e35482e.gif",
+    "index.html": "/Pokemon-Gallery/index.html",
+    "main.48c556fa.css.map": "/Pokemon-Gallery/static/css/main.48c556fa.css.map",
+    "main.41441cac.js.map": "/Pokemon-Gallery/static/js/main.41441cac.js.map"
   },
   "entrypoints": [
-    "static/css/main.bab71535.css",
-    "static/js/main.723c19e5.js"
+    "static/css/main.48c556fa.css",
+    "static/js/main.41441cac.js"
   ]
 }
